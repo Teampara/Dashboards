@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Business Insight Graph Builder</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>Business Insight Graph Builder</h1>
+      <p>
+        Upload Excel, CSV, TXT, TSV, or JSON data and automatically generate business-friendly KPIs and charts
+        for invoices, sales, customer records, and feedback.
+      </p>
+    </header>
+
+    <section class="uploader" id="dropZone" aria-label="File upload zone">
+      <input id="fileInput" type="file" accept=".xlsx,.xls,.csv,.txt,.tsv,.json" />
+      <p><strong>Drop a file here</strong> or click to upload.</p>
+      <small>Supported: .xlsx, .xls, .csv, .txt, .tsv, .json</small>
+    </section>
+
+    <section class="controls">
+      <label for="sheetSelect">Sheet (Excel only):</label>
+      <select id="sheetSelect" disabled></select>
+      <button id="analyzeBtn" disabled>Analyze Data</button>
+    </section>
+
+    <section id="messages" class="messages" aria-live="polite"></section>
+
+    <section class="kpis" id="kpiCards"></section>
+
+    <section class="charts" id="chartsGrid">
+      <article class="chart-card">
+        <h2>Trend Over Time</h2>
+        <canvas id="trendChart"></canvas>
+      </article>
+      <article class="chart-card">
+        <h2>Top Categories</h2>
+        <canvas id="categoryChart"></canvas>
+      </article>
+      <article class="chart-card">
+        <h2>Distribution</h2>
+        <canvas id="distributionChart"></canvas>
+      </article>
+      <article class="chart-card">
+        <h2>Feedback Sentiment</h2>
+        <canvas id="sentimentChart"></canvas>
+      </article>
+    </section>
+
+    <section class="table-wrap">
+      <h2>Data Preview</h2>
+      <div id="previewTable"></div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
