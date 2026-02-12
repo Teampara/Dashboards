@@ -1,0 +1,7 @@
+InvoiceID,Date,Customer,Category,Amount,Feedback
+INV-1001,2026-01-02,Acme Corp,Software,1200,Great onboarding and smooth service
+INV-1002,2026-01-04,Beta Ltd,Hardware,850,Delivery was late and support issue
+INV-1003,2026-01-07,Acme Corp,Software,1590,Excellent features and fast setup
+INV-1004,2026-01-10,Delta Inc,Services,420,Good but response was slow
+INV-1005,2026-01-15,Echo LLC,Hardware,980,Amazing quality and happy team
+INV-1006,2026-01-22,Foxtrot Co,Services,760,Poor communication and bad follow-up

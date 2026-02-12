@@ -1,0 +1,145 @@
+:root {
+  color-scheme: light;
+  --bg: #f6f8fb;
+  --card: #ffffff;
+  --text: #10233f;
+  --muted: #506178;
+  --primary: #2d6cdf;
+  --success: #12966f;
+  --warning: #cf7c00;
+  --border: #dce3ef;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.2rem;
+}
+
+header h1 { margin-bottom: 0.2rem; }
+header p { margin-top: 0; color: var(--muted); }
+
+.uploader {
+  border: 2px dashed var(--primary);
+  background: #e8f0ff;
+  border-radius: 12px;
+  padding: 1.25rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.uploader.dragover {
+  background: #d8e6ff;
+}
+
+.uploader input {
+  display: block;
+  margin: 0 auto 0.7rem;
+}
+
+.controls {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+button {
+  border: none;
+  background: var(--primary);
+  color: white;
+  border-radius: 8px;
+  padding: 0.6rem 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:disabled,
+select:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.messages {
+  margin-top: 1rem;
+  min-height: 1.2rem;
+  font-weight: 600;
+}
+
+.messages.success { color: var(--success); }
+.messages.warn { color: var(--warning); }
+
+.kpis {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 0.8rem;
+}
+
+.kpi {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.8rem;
+}
+
+.kpi span {
+  display: block;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.kpi strong {
+  font-size: 1.25rem;
+}
+
+.charts {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 0.8rem;
+}
+
+.chart-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.8rem;
+}
+
+.chart-card h2 {
+  margin-top: 0.2rem;
+  font-size: 1rem;
+}
+
+.table-wrap {
+  margin-top: 1rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.8rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+}
+
+th, td {
+  border: 1px solid var(--border);
+  padding: 0.4rem;
+  text-align: left;
+}
+
+th { background: #eef3fc; }
