@@ -259,3 +259,28 @@ Then open PR to `main` and run full smoke tests on Vercel.
 ---
 
 If you want, next step I can provide a **single “Day-1 implementation checklist”** with exact file-by-file code stubs so you can build all routes/components quickly in one pass.
+
+## Push this code to Teampara/StoryBook
+
+If your target repository is `StoryBook`, run:
+
+```bash
+./scripts/push-to-storybook.sh
+```
+
+Optional arguments:
+
+```bash
+./scripts/push-to-storybook.sh <repo-url> <target-branch>
+```
+
+Example:
+
+```bash
+./scripts/push-to-storybook.sh https://github.com/Teampara/StoryBook.git main
+```
+
+Notes:
+- You may be prompted for GitHub credentials/token on push.
+- If the target repo is private, ensure your account has write access.
+
